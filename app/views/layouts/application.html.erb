@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ParaisoStudioWebPage</title>
-    <%= csrf_meta_tags %>
+<head>
+	<title>ParaisoStudioWebPage</title>
+	<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+	<div class="masthead clearfix">
+		<div class="inner">
+			<nav class="nav nav-masthead app-nav">
+				<%= nav_helper 'nav-link', 'span' %>
+
+			</nav>
+		</div>
+	</div>
+	<%= yield %>
+</body>
 </html>
