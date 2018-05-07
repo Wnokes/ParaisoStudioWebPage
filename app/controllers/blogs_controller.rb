@@ -13,7 +13,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
       if @blog.save
-        redirect_to blog_path
+        redirect_to blog_path(@blog)
       else
         render :new
       end
@@ -36,7 +36,7 @@ class BlogsController < ApplicationController
   
   def destroy
     if @blog.destroy
-          redirect_to blog_path, notice: 'Your blog was destroyed successfully'
+          redirect_to blogs_path, notice: 'Your blog was destroyed successfully'
       else
         render :show, notice: 'Your blog could not be destroyed'
       end

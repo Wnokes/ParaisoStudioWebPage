@@ -1,0 +1,7 @@
+<h1>blog show</h1>
+
+<%= @blog.title %>
+<%= @blog.body %>
+<%= link_to "edit", edit_blog_path(@blog) %>
+<%= link_to "Delete", @blog, method: :delete, data:  {confirm: "Are you sure you want to delete?"} %>
+<%= link_to "toggle status", blog_path(@blog) %>
