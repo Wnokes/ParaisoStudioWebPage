@@ -1,11 +1,9 @@
+<div class="album text-muted">
+  <div class="container">
 
-<h1>Portfolio index</h1>
+    <div class="row portfolio-item">
+      <%= render partial: 'portfolio_item', collection: @portfolios %>
+    </div>
+  </div>
+</div>
 
-<div><%= link_to "New Portfolio", new_portfolio_path if logged_in?(:admin) %></div>
-
-<% @portfolios.each do |port| %>
-  <h3><%= link_to port.title, portfolio_path(port) %></h3>
-  <%= port.description.truncate(50) %>
-  <hr>
-
-<% end %>
