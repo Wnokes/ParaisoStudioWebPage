@@ -1,11 +1,6 @@
-<h1>Blogs index</h1>
+<h1>Another day at Paraiso!</h1>
 
-<%= link_to "new:", new_blog_path %>
+<%= link_to "New Blog", new_blog_path if logged_in?(:admin) %>
 <hr>
 
-<% @blogs.each do |blog| %>
-  <%= link_to blog.title, blog_path(blog) %>
-  <%= blog.created_at %>
-  <%= blog.body.truncate(50) %>
-  <hr>
-<% end %>
+<%= render @blogs %>

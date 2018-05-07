@@ -1,10 +1,10 @@
+
 <h1>Portfolio index</h1>
 
-<%= link_to "new:", new_portfolio_path %>
-<hr>
+<div><%= link_to "New Portfolio", new_portfolio_path if logged_in?(:admin) %></div>
 
 <% @portfolios.each do |port| %>
-  <%= link_to port.title, portfolio_path(port) %>
+  <h3><%= link_to port.title, portfolio_path(port) %></h3>
   <%= port.description.truncate(50) %>
   <hr>
 

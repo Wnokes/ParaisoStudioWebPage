@@ -45,4 +45,8 @@ module ApplicationHelper
 	def alert_generator msg
 		js add_gritter(msg, sticky: false, time: 3000)
 	end
+
+	def copyright_generator
+		VerbalPantsCoolViewTool::Renderer.copyright 'Paraiso Gaming Studios', 'All rights reserved'
+	end
 end

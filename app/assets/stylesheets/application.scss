@@ -35,7 +35,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Open Sans', monospace;
 }
 body {
   color: #fff;
@@ -60,9 +60,10 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-.about-us {
-  background-color: #0061ea;
-}
+#about-us {
+      background: rgba(204, 204, 204, 0.5);
+      }
+
 
 /* Padding for spacing */
 .inner {
@@ -219,18 +220,6 @@ body {
   color: white;
 }
 
-.tech-news {
-  color: black;
-  margin: 20px;
-}
-
-.tech-news > .card {
-  padding: 30px;
-}
-
-.tech-news a {
-  color: green;
-}
 
 .app-card-container {
   color: black;
@@ -258,7 +247,11 @@ body {
   margin: 10px;
 }
 
-.ubuntu {
-	color: red;
-	font-family: Ubuntu, sans-serif, !important;
+.blog-post {
+color: black;
+ background: rgba(255, 255, 255, 0.9);
+}
+
+.blog-link a {
+  color: red;
 }
