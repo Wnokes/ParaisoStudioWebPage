@@ -1,0 +1,11 @@
+<h1>Portfolio index</h1>
+
+<%= link_to "new:", new_portfolio_path %>
+<hr>
+
+<% @portfolios.each do |port| %>
+  <%= link_to port.title, portfolio_path(port) %>
+  <%= port.description.truncate(50) %>
+  <hr>
+
+<% end %>
