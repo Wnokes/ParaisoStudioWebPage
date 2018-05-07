@@ -3,7 +3,11 @@ class BlogsController < ApplicationController
   # access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   def index
-   @blogs = Blog.all
+    if logged_in?(:site_admin)
+      @blogs = Blog.per(10)
+    else
+      @blogs = Blog.published.page params[:page]
+    end
   end
 
   def new

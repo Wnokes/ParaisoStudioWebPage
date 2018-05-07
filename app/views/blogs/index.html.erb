@@ -1,6 +1,9 @@
 <h1>Another day at Paraiso!</h1>
 
 <%= link_to "New Blog", new_blog_path if logged_in?(:admin) %>
-<hr>
+
+<%= paginate @blogs %>
 
 <%= render @blogs %>
+
+<%= paginate @blogs %>
