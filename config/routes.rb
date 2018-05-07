@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+
   
   resources :portfolios do
     member do 
       get :toggle_status
     end
   end
-
-
+  
   resources :blogs do
     member do
       get :toggle_status
