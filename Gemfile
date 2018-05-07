@@ -35,3 +35,8 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'gritter', '~> 1.2'
+
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave', '~> 1.2', '>= 1.2.2' 
