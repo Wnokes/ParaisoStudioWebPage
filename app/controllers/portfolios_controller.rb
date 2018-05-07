@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy, :toggle_status]
   # access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   def index
@@ -11,9 +11,9 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    @portfolio = Portfolio.new(blog_params)
+    @portfolio = Portfolio.new(portfolio_params)
       if @portfolio.save
-        redirect_to blog_path(@portfolio)
+        redirect_to portfolio_path(@portfolio)
       else
         render :new
       end
@@ -23,7 +23,7 @@ class PortfoliosController < ApplicationController
   end
   
   def update
-      if @portfolio.update(blog_params)
+      if @portfolio.update(portfolio_params)
         @portfolio.save
         redirect_to @portfolio, notice: 'Your portfolio was edited successfully'
       else
