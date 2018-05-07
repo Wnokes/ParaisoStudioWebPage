@@ -44,14 +44,14 @@ class BlogsController < ApplicationController
 
 
 
-  # def toggle_status
-  #   if @people.draft?
-  #     @people.published!
-  #   elsif @people.published?
-  #     @people.draft!
-  #   end      
-  #   redirect_to user_dashboard_admin_path, notice:  "#{@people.name} status has been updated."
-  # end
+  def toggle_status
+    if @blog.draft?
+      @blog.published!
+    elsif @blog.published?
+      @blog.draft!
+    end      
+    redirect_to blogs_path, notice:  "#{@blog.title} status has been updated."
+  end
 
 
   private

@@ -1,1 +1,7 @@
-I changed the read me
+TODO:
+
+Gritter
+
+style
+
+portfolio crud

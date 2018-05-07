@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   resources :portfolios
-  resources :blogs
+
+
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
+
+
   get 'pages/home'
 
   get 'pages/contact'
