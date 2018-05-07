@@ -9,14 +9,13 @@
 </head>
 
 <body>
-	<div class="masthead clearfix">
-		<div class="inner">
-			<nav class="nav nav-masthead app-nav">
-				<%= nav_helper 'nav-link', 'span' %>
-
-			</nav>
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container">
+				<%= render 'shared/application_nav' %>
+				<%= yield %>
+			</div>
 		</div>
 	</div>
-	<%= yield %>
 </body>
 </html>
