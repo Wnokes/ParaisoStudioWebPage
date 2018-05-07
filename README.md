@@ -1,7 +1,7 @@
 TODO:
 
-Gritter
-
 style
 
-portfolio crud
+add pictures to the dag um portfolios
+
+contact page
