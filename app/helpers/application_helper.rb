@@ -21,15 +21,15 @@ module ApplicationHelper
 			},
 			{
 				url: blogs_path,
-				title: 'About Me'
+				title: 'Blogs'
 			},
 			{
 				url: portfolios_path,
-				title: 'Contact'
+				title: 'Portfolio'
 			},
 			{
 				url: pages_contact_path,
-				title: 'Blog'
+				title: 'Contact'
 			},
 		]
 	end
