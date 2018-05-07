@@ -1,0 +1,11 @@
+<h1>You are in portfolios form</h1>
+
+<%= form_for @portfolio do |f| %>
+  <%= f.label :Title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :Description %>:
+  <%= f.text_area :description %><br />
+
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h2>Portfolio Show</h2>
+
+<%= @portfolio.status %>
+<%= @portfolio.title %>
+<%= @portfolio.description %>
+
+<%= link_to "edit", edit_portfolio_path(@portfolio) %>
+<%= link_to "Delete", @portfolio, method: :delete, data:  {confirm: "Are you sure you want to delete?"} %>
+<%= link_to "toggle status", toggle_status_portfolio_path(@portfolio) %>
