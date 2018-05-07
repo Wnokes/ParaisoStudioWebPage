@@ -1,0 +1,11 @@
+<h1>Blogs index</h1>
+
+<%= link_to "new:", new_blog_path %>
+<hr>
+
+<% @blogs.each do |blog| %>
+  <%= link_to blog.title, blog_path(blog) %>
+  <%= blog.created_at %>
+  <%= blog.body.truncate(50) %>
+  <hr>
+<% end %>
