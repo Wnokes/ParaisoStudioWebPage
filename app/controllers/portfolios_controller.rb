@@ -3,7 +3,7 @@ class PortfoliosController < ApplicationController
   # access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   def index
-   @portfolios = Portfolio.order("position ASC")
+   @portfolios = Portfolio.by_position
   end
 
   def new
