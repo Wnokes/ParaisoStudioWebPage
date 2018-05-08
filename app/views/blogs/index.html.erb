@@ -2,8 +2,14 @@
 
 <%= link_to "New Blog", new_blog_path if logged_in?(:admin) %>
 
-<%#= paginate @blogs %>
+<%= paginate @blogs %>
 
+<div class="about-us">
+	
 <%= render @blogs %>
+</div>
 
-<%#= paginate @blogs %>
+<div class="paginate-bar">
+<%= paginate @blogs %>
+</div>
+	

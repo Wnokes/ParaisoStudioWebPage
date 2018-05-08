@@ -2,8 +2,8 @@
 @import "gritter";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
 /*
- * Globals
- */
+* Globals
+*/
 /* Links */
 a,
 a:focus,
@@ -20,8 +20,8 @@ a:hover {
   border: .05rem solid #fff;
 }
 /*
- * Base structure
- */
+* Base structure
+*/
 html,
 body {
   height: 100%;
@@ -36,10 +36,10 @@ body {
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
+  height: 81%; /* For at least Firefox */
+  min-height: 80%;
   -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+  box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -49,16 +49,46 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-#about-us {
-      background: rgba(204, 204, 204, 0.5);
-      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-us {
+border-radius: 14px 14px 14px 14px;
+-moz-border-radius: 14px 14px 14px 14px;
+-webkit-border-radius: 14px 14px 14px 14px;
+border: 6px solid #464c56;
+  padding: 15px;
+
+  background: rgba(204, 204, 204, 0.8);
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
 /* Padding for spacing */
 .inner {
-  padding: 2rem;
+  padding-top: 1rem;
 }
 /*
- * Header
- */
+* Header
+*/
 .masthead {
   margin-bottom: 2rem;
   position: relative;
@@ -69,6 +99,7 @@ body {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
+  font-size: 2em;
   color: rgba(255,255,255,.5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
@@ -94,8 +125,8 @@ body {
   }
 }
 /*
- * Cover
- */
+* Cover
+*/
 .cover {
   padding: 0 1.5rem;
 }
@@ -104,14 +135,14 @@ body {
   font-weight: bold;
 }
 /*
- * Footer
- */
+* Footer
+*/
 .mastfoot {
   color: rgba(255,255,255,.5);
 }
 /*
- * Affix and center
- */
+* Affix and center
+*/
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
@@ -142,8 +173,8 @@ body {
   }
 }
 /*
- * Custom Styles
- */
+* Custom Styles
+*/
 .card-block {
   color: black;
   text-align: left;
@@ -163,6 +194,7 @@ body {
   top: 15;
 }
 .app-nav span {
+  padding-top: 18px;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -204,9 +236,84 @@ body {
   margin: 10px;
 }
 .blog-post {
-color: black;
- background: rgba(255, 255, 255, 0.9);
+  color: black;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 5px;
+  border-color: #1a00b2;
+
 }
 .blog-link a {
-  color: red;
+  color: black;
+}
+
+.pagination a, .pagination span.current, .pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #DDD;
+  border-left-width: 0;
+}
+
+
+.pagination {
+  margin-left: auto; 
+  margin-right: auto;
+  border-left: px solid #ddd;
+
+  .first{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .prev {
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .page{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .next{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+  .last{
+    padding : 0;
+    float: none;
+    border: none;
+  }
+
+}
+
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+}
+
+.type1 {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border: 3px solid red;
+}
+.type2 {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border: 3px solid #000;
+}
+.type3 {
+    width: 500px;
+    height: 500px;
+    background: aqua;
+    border: 30px solid blue;
+}
+.portfolio-margin {
+  margin: 10px;
 }
