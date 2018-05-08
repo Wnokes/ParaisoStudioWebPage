@@ -23,19 +23,20 @@
 					loop: true,
 					muted: true,
 					poster: 'Palm_Trees.jpg'
-				) 
-				%>
-				<div class="nav-header">
-				<%= render 'shared/application_nav' %>
+					) 
+					%>
+					<div class="site-wrapper-header row">
+						<div class="nav-header">
+							<%= render 'shared/application_nav' %>
+						</div>
+					</div>
+
+					<%= alerts %>
+					
+					<%= yield %>
+					<%= copyright_generator %>
 				</div>
-
-
-       				<%= alerts %>
-
-				<%= yield %>
-				<%= copyright_generator %>
 			</div>
 		</div>
-	</div>
-</body>
-</html>
+	</body>
+	</html>
