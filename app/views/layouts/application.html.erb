@@ -12,6 +12,7 @@
 </head>
 
 <body>
+					<div class="nav-class"><%= render 'shared/application_nav' %></div>
 	<div class="site-wrapper">
 		<div class="site-wrapper-inner">
 			<div class="cover-container">
@@ -25,17 +26,20 @@
 					poster: 'Palm_Trees.jpg'
 				) 
 				%>
+				<div class="header">
 				<div class="nav-header">
-				<%= render 'shared/application_nav' %>
+
+				</div>
 				</div>
 
 
        				<%= alerts %>
 
-				<%= yield %>
-				<%= copyright_generator %>
+				<div class="verticle-center"><%= yield %></div>
+
 			</div>
 		</div>
 	</div>
+					<%= copyright_generator %>
 </body>
 </html>
