@@ -3,7 +3,11 @@ class BlogsController < ApplicationController
   # access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
 
   def index
-   @blogs = Blog.all
+    if logged_in?(:site_admin)
+      @blogs = Blog.all
+    else
+      @blogs = Blog.all
+    end
   end
 
   def new

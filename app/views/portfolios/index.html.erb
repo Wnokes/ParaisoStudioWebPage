@@ -1,11 +1,9 @@
-<h1>Portfolio index</h1>
+<div class="album text-muted">
+  <div class="container">
 
-<%= link_to "new:", new_portfolio_path %>
-<hr>
+    <div class="row portfolio-item">
+      <%= render partial: 'portfolio_item', collection: @portfolios %>
+    </div>
+  </div>
+</div>
 
-<% @portfolios.each do |port| %>
-  <%= link_to port.title, portfolio_path(port) %>
-  <%= port.description.truncate(50) %>
-  <hr>
-
-<% end %>
