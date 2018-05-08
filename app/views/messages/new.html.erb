@@ -1,0 +1,16 @@
+<%= form_for @message, url: create_message_url do |f| %>
+<%= notice %>
+<%= @message.errors.full_messages.join(', ') %>
+<div class="row">
+  <div class="col-md-5">
+    <p><%= f.text_field :name, placeholder: 'name' %></p>
+    <p><%= f.text_field :company, placeholder: 'company' %></p>
+    <p><%= f.email_field :email, placeholder: 'email' %></p>
+  </div>
+  <div class="col-md-5">
+    <p><%= f.text_field :budget, placeholder: 'budget' %></p>
+    <p><%= f.text_area :project_description, placeholder: 'project_description' %></p>
+  </div>
+</div>
+<%= f.submit 'Send' %>
+<% end %>
