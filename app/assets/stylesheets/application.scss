@@ -15,15 +15,7 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
+
 
 
 /*
@@ -56,6 +48,11 @@ body {
   display: table-cell;
   vertical-align: top;
 }
+
+.site-wrapper-header {
+  display: table-cell;
+  vertical-align: top;
+}
 .cover-container {
   margin-right: auto;
   margin-left: auto;
@@ -64,12 +61,12 @@ body {
       background: rgba(204, 204, 204, 0.5);
       }
 
-
 /* Padding for spacing */
 .inner {
   padding: 2rem;
-}
+  vertical-align: top;
 
+}
 
 /*
  * Header
@@ -147,7 +144,7 @@ body {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    position: relative;
+    position: fixed;
     top: 0;
   }
   .mastfoot {
@@ -171,7 +168,7 @@ body {
   .mastfoot,
   .cover-container {
     width: 65rem;
-    position: relative;
+
   }
 }
 
@@ -226,7 +223,9 @@ body {
   color: white;
 }
 
-
+/*
+CARDS STUFF
+*/
 .app-card-container {
   color: black;
   text-align: left;
