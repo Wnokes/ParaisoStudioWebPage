@@ -12,6 +12,7 @@
 </head>
 
 <body>
+					<div class="nav-class"><%= render 'shared/application_nav' %></div>
 	<div class="site-wrapper">
 		<div class="site-wrapper-inner">
 			<div class="cover-container">
@@ -23,20 +24,22 @@
 					loop: true,
 					muted: true,
 					poster: 'Palm_Trees.jpg'
-					) 
-					%>
-					<div class="site-wrapper-header row">
-						<div class="nav-header">
-							<%= render 'shared/application_nav' %>
-						</div>
-					</div>
+				) 
+				%>
+				<div class="header">
+				<div class="nav-header">
 
-					<%= alerts %>
-					
-					<%= yield %>
-					<%= copyright_generator %>
 				</div>
+				</div>
+
+
+       				<%= alerts %>
+
+				<div class="verticle-center"><%= yield %></div>
+
 			</div>
 		</div>
-	</body>
-	</html>
+	</div>
+					<%= copyright_generator %>
+</body>
+</html>
