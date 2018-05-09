@@ -12,13 +12,13 @@
 
 </div>
 <div class="row justify-content-md-center">
-<div class="col-md-5 about-us margin-20">
+<div class="col-md-6 about-us margin-20">
 	    <%= image_tag portfolio_img(@portfolio.main_image, 'main'), width: '100%', :class => "" %>
 </div>
 
 <div class="col-md-6 about-us margin-20">
 <h3><%= "#{@portfolio.title.titleize} Description:" %></h3>
-<%= @portfolio.description %>
+<%= markdown @portfolio.description %>
 </div>
 </div>
 </div>
