@@ -237,57 +237,13 @@ border: 6px solid #464c56;
 }
 .blog-post {
   color: black;
-  background: rgba(255, 255, 255, 0.9);
+  /*background: rgba(255, 255, 255, 0.9);*/
   margin: 5px;
-  border-color: #1a00b2;
+
 
 }
 .blog-link a {
   color: black;
-}
-
-.pagination a, .pagination span.current, .pagination span.gap {
-  float: left;
-  padding: 0 14px;
-  line-height: 38px;
-  text-decoration: none;
-  background-color: white;
-  border: 1px solid #DDD;
-  border-left-width: 0;
-}
-
-
-.pagination {
-  margin-left: auto; 
-  margin-right: auto;
-  border-left: px solid #ddd;
-
-  .first{
-    padding : 0;
-    float: none;
-    border: none;
-  }
-  .prev {
-    padding : 0;
-    float: none;
-    border: none;
-  }
-  .page{
-    padding : 0;
-    float: none;
-    border: none;
-  }
-  .next{
-    padding : 0;
-    float: none;
-    border: none;
-  }
-  .last{
-    padding : 0;
-    float: none;
-    border: none;
-  }
-
 }
 
 .circleBase {
@@ -316,4 +272,37 @@ border: 6px solid #464c56;
 }
 .portfolio-margin {
   margin: 10px;
+}
+
+.pageinate {
+  border-width: 2px;
+  padding: 5px;
+  border-radius: 8px 8px 8px 8px;
+-moz-border-radius: 8px 8px 8px 8px;
+-webkit-border-radius: 8px 8px 8px 8px;
+  background: rgba(204, 204, 204, 0.6);
+}
+
+.paginate-bar {
+  margin-top: 15px;
+}
+
+.page-title {
+  margin-top: 20px;
+}
+
+.thumb-image-portfolio {
+  width: 100%;
+  max-height:124px;
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
+.draft {
+  background-color: red;
+}
+.published {
+  background-color: green;
 }

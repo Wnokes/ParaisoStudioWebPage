@@ -1,15 +1,18 @@
+<div class="page-title">
 <h1>Another day at Paraiso!</h1>
+</div>
 
 <%= link_to "New Blog", new_blog_path if logged_in?(:admin) %>
 
+<div class="row justify-content-md-center paginate-bar">
 <%= paginate @blogs %>
+</div>
 
-<div class="about-us">
-	
+<div>
 <%= render @blogs %>
 </div>
 
-<div class="paginate-bar">
+<div class="row justify-content-md-center paginate-bar">
 <%= paginate @blogs %>
 </div>
 	
