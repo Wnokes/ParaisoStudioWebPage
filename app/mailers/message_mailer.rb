@@ -6,8 +6,11 @@ class MessageMailer < ApplicationMailer
   #   en.message_mailer.contact.subject
   #
   def contact(message)
-    @body = message.project_description
+    @name = message.name
+    @company = message.company
+    @email = message.email
+    @project_description = message.project_description
 
-    mail to: "DuskDawnfable@gmail.com", from: message.email
+    mail to: "ParaisoGamingStudios@gmail.com", subject: "Proposal from client"
   end
 end
