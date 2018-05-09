@@ -1,0 +1,21 @@
+<div class="about-us">
+  <div> Phone: (801) 558 4126 </div>
+  <div> Mailing: (Should we get a PO Box?)</div>
+  <div>Email: (Please allow up to 72hrs for a reply)</div>
+  <div>
+    <%= form_for @support, url: create_support_url do |f| %>
+      <%= notice %>
+      <%= @support.errors.full_messages.join(', ') %>
+      <div class="row justify-content-md-center">
+        <p class="col-md-3"><%= f.text_field :name, placeholder: 'name', class: "form-control" %></p>
+        <p class="col-md-3"><%= f.email_field :email, placeholder: 'email', class: "form-control" %></p>
+      </div>
+      <div class="row justify-content-md-center">
+        <p class="col-md-6"><%= f.text_area :body, placeholder: 'body', class: "form-control", rows: "6" %></p>
+      </div>
+      <%= f.submit 'Send', class: 'btn btn-outline-dark' %>
+    <% end %>
+  </div>
+  <hr>
+  <div><%= link_to "Have a business inquary?", new_message_path, class: 'btn btn-outline-dark' %></div>
+</div>
