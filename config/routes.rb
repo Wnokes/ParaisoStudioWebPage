@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   
   resources :portfolios do
+    put :sort, on: :collection
     member do 
       get :toggle_status
     end
