@@ -16,7 +16,7 @@
 
 <div class="col-md-6 about-us margin-20">
 <h3><%= "#{@blog.title.titleize} Body:" %></h3>
-<%= @blog.body %>
+<%= markdown @blog.body %>
 </div>
 </div>
 </div>

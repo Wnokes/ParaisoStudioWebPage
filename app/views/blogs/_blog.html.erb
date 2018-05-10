@@ -3,6 +3,6 @@
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
 
   <p>
-    <%= blog.body.truncate(250) %> <span class="blog-link"><%= link_to "Continue Reading", blog %></span>
+    <%= markdown blog.body.truncate(250) %> <span class="blog-link"><%= link_to "Continue Reading", blog %></span>
   </p>
 </div>
