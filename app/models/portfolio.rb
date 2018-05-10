@@ -5,6 +5,9 @@ class Portfolio < ApplicationRecord
   mount_uploader :thumbnail_image, ImageUploader
 	mount_uploader :main_image, ImageUploader
 
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+
   def self.by_position
     order("position ASC")
   end

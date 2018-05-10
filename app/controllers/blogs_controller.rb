@@ -36,6 +36,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @blog = Blog.friendly.find(params[:id])
   end
   
   def destroy
