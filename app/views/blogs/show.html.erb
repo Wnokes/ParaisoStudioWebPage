@@ -2,6 +2,7 @@
 
 <div class="row justify-content-md-center">
 <% if logged_in?(:admin) %>
+
 <div class="about-us col-md-6 margin-20">
 	<h4>ADMIN OPTIONS</h4>
 	<%= link_to "Edit", edit_blog_path(@blog), class: "about-us pageinate" %>
@@ -14,8 +15,8 @@
 <div class="row justify-content-md-center">
 
 
-<div class="col-md-6 about-us margin-20">
-<%= markdown @blog.body %>
+<div class="col-md-9 about-us margin-20">
+<div class="alight-right"><%= markdown @blog.body %></div>
 </div>
 </div>
 </div>
