@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  # access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
   def index
     if logged_in?(:site_admin)
@@ -54,7 +54,7 @@ class BlogsController < ApplicationController
     elsif @blog.published?
       @blog.draft!
     end      
-    redirect_to blogs_path, notice:  "#{@blog.title} status has been updated."
+    redirect_to blog_path, notice:  "#{@blog.title} status has been updated."
   end
 
 
