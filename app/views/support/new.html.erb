@@ -7,7 +7,7 @@
       <%= form_for @support, url: create_support_url do |f| %>
         <%= notice %>
         <%= @support.errors.full_messages.join(', ') %>
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center page-title">
           <p class="col-md-6"><%= f.text_field :name, placeholder: 'Name', class: "form-control" %></p>
           <p class="col-md-6"><%= f.email_field :email, placeholder: 'Email or Phone Number', class: "form-control" %></p>
         </div>

@@ -1,4 +1,4 @@
-<h2> <%= @blog.title.titleize %></h2>
+<h2 class="page-title"> <%= @blog.title.titleize %></h2>
 
 <div class="row justify-content-md-center">
 <% if logged_in?(:admin) %>
@@ -15,7 +15,6 @@
 
 
 <div class="col-md-6 about-us margin-20">
-<h3><%= "#{@blog.title.titleize} Body:" %></h3>
 <%= markdown @blog.body %>
 </div>
 </div>
