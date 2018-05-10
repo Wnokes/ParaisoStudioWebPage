@@ -1,7 +1,7 @@
 class PortfoliosController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy, :toggle_status]
-  # access all: [:index, :show], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new ,:create, :update, :edit, :sort]}, site_admin: :all
 
   def index
    @portfolios = Portfolio.by_position
@@ -10,6 +10,7 @@ class PortfoliosController < ApplicationController
   def sort
     params[:order].each do |key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
+      redirect_to portfolios_path
     end
 
     render nothing: true
@@ -59,7 +60,7 @@ class PortfoliosController < ApplicationController
     elsif @portfolio.published?
       @portfolio.draft!
     end      
-    redirect_to portfolios_path, notice:  "#{@portfolio.title} status has been updated."
+    redirect_to portfolio_path, notice:  "#{@portfolio.title} status has been updated."
   end
 
 

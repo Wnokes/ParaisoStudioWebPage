@@ -4,7 +4,7 @@
 			<nav class="nav nav-masthead app-nav">
 				<%= nav_helper 'nav-link', 'span' %>
 			</nav>
-			<% if logged_in?(:admin) %>
+			<% if signed_in? %>
 				<%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn about-us pageinate" %>
 			<% end %>
 		</div>
