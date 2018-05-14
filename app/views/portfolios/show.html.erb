@@ -18,10 +18,18 @@
 			<div class="col-md-12 about-us ">
 				<%= image_tag portfolio_img(@portfolio.main_image, 'main'), width: '100%', :class => "" %>
 			</div>
-			<% if @portfolio.url %>
+			<% if (@portfolio.url && @portfolio.url != "" ) || @portfolio.technologies.length > 0 %>
 			<div class="col-md-12 about-us page-title ">
+				<% if (@portfolio.url && @portfolio.url != "" ) %>
 				<h4>Visit This Page! </h4>
 				<h5><%= link_to "#{@portfolio.url}", "https://#{@portfolio.url}", :target => "blank" %> <h5>
+				<% end %>
+				<% if @portfolio.technologies.length > 0 %>
+					<h4>Technologies Used In This Application </h4>
+					<% @portfolio.technologies.each do |tech| %>
+						<%= tech.title %>
+					<% end %>
+				<% end %>
 			</div>
 			<% end %>
 		</div>
