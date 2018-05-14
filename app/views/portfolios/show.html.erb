@@ -16,12 +16,15 @@
 	<div class="col-md-5 margin-20">
 		<div class="row">
 			<div class="col-md-12 about-us ">
-				<%= image_tag portfolio_img(@portfolio.main_image, 'main'), width: '100%', :class => "" %>
+
+				<%= image_tag portfolio_img(@portfolio.main_image, 'main'), width: '100%', :id => "myImg" %>
+				(click to enlarge)
 			</div>
 			<% if (@portfolio.url && @portfolio.url != "" ) || @portfolio.technologies.length > 0 %>
 			<div class="col-md-12 about-us page-title ">
 				<% if (@portfolio.url && @portfolio.url != "" ) %>
 				<h4>Visit This Page! </h4>
+				<!-- Trigger the Modal -->
 				<h5><%= link_to "#{@portfolio.url}", "https://#{@portfolio.url}", :target => "blank" %> <h5>
 				<% end %>
 				<% if @portfolio.technologies.length > 0 %>
@@ -39,4 +42,21 @@
 		<div class="alight-right"><%= markdown @portfolio.description %></div>
 	</div>
 </div>
+</div>
+
+<!-- This is the javascript call -->
+<%= render "modalImage" %>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
 </div>
