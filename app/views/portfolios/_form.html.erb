@@ -33,6 +33,8 @@
   	<%= f.file_field :thumbnail_image %>
   </div>
 </div>
+<div> <%= link_to_add_association 'Add Technology', f, :technologies %> </div>
+
 <p>NOTICE: THUMBNAIL IMAGE SIZES ARE PLACED IN A 208x124 AREA, IF IMAGES UPLOADED ARE A DIFFERENT ASPECT RATIO THEY WILL BE DISTORED</p>
 
 <%= f.submit 'Submit', class: "btn btn-outline-dark" %>

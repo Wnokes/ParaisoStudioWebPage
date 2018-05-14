@@ -2,6 +2,9 @@ class Portfolio < ApplicationRecord
   enum status: { draft: 0, published: 1}
   validates_presence_of :title, :description
 
+  has_many :technologies
+  accepts_nested_attributes_for :technologies, reject_if: :all_blank, allow_destroy: true
+
   mount_uploader :thumbnail_image, ImageUploader
 	mount_uploader :main_image, ImageUploader
 
