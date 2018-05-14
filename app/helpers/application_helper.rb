@@ -43,7 +43,7 @@ module ApplicationHelper
 	end
 
 	def alert_generator msg
-		js add_gritter(msg, sticky: false, time: 500)
+		js add_gritter(msg, sticky: false, time: 1000)
 	end
 
 	def copyright_generator

@@ -1,6 +1,9 @@
   	<div class='page-title'>
   		<h1>Portfolios of Previous Work</h1>
-  		<%= link_to "New Portfolio", new_portfolio_path if logged_in?(:admin) %>
+
+      <% if logged_in?(:admin) %> 
+  		  <%= link_to "New Portfolio", new_portfolio_path, class: "btn btn-outline-dark" %>
+      <% end %>
 
   	</div>
 <div class="album text-muted">

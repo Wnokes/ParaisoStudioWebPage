@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, admin: :all
 
   def index
-    if logged_in?(:site_admin)
+    if logged_in?(:admin)
       @blogs = Blog.page(params[:page]).per(10)
     else
       @blogs = Blog.page(params[:page]).per(10)
