@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20180511163708) do
     t.string "main_image"
     t.string "thumbnail_image"
     t.integer "position"
-    t.string "slug"
     t.string "url"
+    t.string "slug"
     t.string "subtitle"
   end
 
