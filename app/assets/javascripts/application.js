@@ -21,5 +21,4 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require gritter
-//= require modalImage
 //= require_tree .
