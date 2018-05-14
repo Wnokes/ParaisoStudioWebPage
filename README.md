@@ -23,3 +23,6 @@ contact page
 - [ ] blogs form
 - [ ] portfolio form
 - [ ] both contact forms
+
+*Touch Up*
+- [ ] set blogs to displace most recent first
