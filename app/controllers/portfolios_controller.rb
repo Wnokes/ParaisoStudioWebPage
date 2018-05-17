@@ -37,7 +37,7 @@ class PortfoliosController < ApplicationController
         @portfolio.save
         redirect_to @portfolio, notice: 'Your portfolio was edited successfully'
       else
-        render :edit
+        render :edit, notice: "Error updating your portfolio"
       end
   end
 
@@ -72,7 +72,14 @@ class PortfoliosController < ApplicationController
     end
 
     def portfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :description, :main_image, :thumbnail_image, :url, technologies_attributes: [:id, :title])
+      params.require(:portfolio).permit(:title, 
+                                        :subtitle, 
+                                        :description, 
+                                        :main_image, 
+                                        :thumbnail_image, 
+                                        :url, 
+                                        technologies_attributes: [:id, :title],
+                                        gallery_items_attributes: [:id, :title, :image, :description, :_destroy])
     end
 
 end
