@@ -43,6 +43,7 @@ class PortfoliosController < ApplicationController
 
   def show
     @portfolio = Portfolio.friendly.find(params[:id])
+    @gallery_items = GalleryItem.where(portfolio_id: @portfolio.id)
   end
   
   def destroy
