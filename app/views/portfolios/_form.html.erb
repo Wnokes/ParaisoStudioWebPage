@@ -33,6 +33,13 @@
   	<%= f.file_field :thumbnail_image %>
   </div>
 </div>
+
+
+  <%= f.fields_for :technologies do |technology|  %>
+    <%= render 'technology_fields', f: technology %>
+  <% end %>
+
+
 <div> <%= link_to_add_association 'Add Technology', f, :technologies %> </div>
 <div> <%= link_to_add_association 'Add GalleryItem', f, :gallery_items %> </div>
 
