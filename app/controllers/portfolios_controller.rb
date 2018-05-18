@@ -79,7 +79,12 @@ class PortfoliosController < ApplicationController
                                         :main_image, 
                                         :thumbnail_image, 
                                         :url, 
-                                        gallery_items_attributes: [:id, :title, :image, :description, :_destroy])
+                                        gallery_items_attributes: 
+                                          [ :id, 
+                                            :title, 
+                                            :image, 
+                                            :description, 
+                                            :_destroy],
 
                                         technologies_attributes: 
                                           [:id, 
