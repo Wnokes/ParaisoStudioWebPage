@@ -37,12 +37,13 @@ class PortfoliosController < ApplicationController
         @portfolio.save
         redirect_to @portfolio, notice: 'Your portfolio was edited successfully'
       else
-        render :edit
+        render :edit, notice: "Error updating your portfolio"
       end
   end
 
   def show
     @portfolio = Portfolio.friendly.find(params[:id])
+    @gallery_items = GalleryItem.where(portfolio_id: @portfolio.id)
   end
   
   def destroy
@@ -78,6 +79,8 @@ class PortfoliosController < ApplicationController
                                         :main_image, 
                                         :thumbnail_image, 
                                         :url, 
+                                        gallery_items_attributes: [:id, :title, :image, :description, :_destroy])
+
                                         technologies_attributes: 
                                           [:id, 
                                             :title,

@@ -5,6 +5,9 @@ class Portfolio < ApplicationRecord
   has_many :technologies
   accepts_nested_attributes_for :technologies, reject_if: :all_blank, allow_destroy: true
 
+  has_many :gallery_items
+  accepts_nested_attributes_for :gallery_items, reject_if: :all_blank, allow_destroy: true
+
   mount_uploader :thumbnail_image, ImageUploader
 	mount_uploader :main_image, ImageUploader
 
