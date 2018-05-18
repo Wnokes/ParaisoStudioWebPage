@@ -25,12 +25,14 @@
 				<% if (@portfolio.url && @portfolio.url != "" ) %>
 				<h4>Visit This Page! </h4>
 				<!-- Trigger the Modal -->
-				<h5><%= link_to "#{@portfolio.url}", "https://#{@portfolio.url}", :target => "blank" %> <h5>
+				<h5><%= link_to "#{@portfolio.url}", "http://#{@portfolio.url}", :target => "blank" %> <h5>
 				<% end %>
 				<% if @portfolio.technologies.length > 0 %>
-					<h4>Technologies Used In This Application </h4>
+					<h4>Technologies Used In Application </h4>
 					<% @portfolio.technologies.each do |tech| %>
-						<%= tech.title %>
+					<div class="alight-right">
+						<%= markdown "* #{tech.title}" %>
+					</div>
 					<% end %>
 				<% end %>
 			</div>
