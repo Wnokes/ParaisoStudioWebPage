@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
     if logged_in?(:admin)
       @blogs = Blog.page(params[:page]).per(10)
     else
-      @blogs = Blog.page(params[:page]).per(10)
+      @blogs = Blog.published.page(params[:page]).per(10)
     end
   end
 

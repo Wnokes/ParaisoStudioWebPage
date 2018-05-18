@@ -4,8 +4,11 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new ,:create, :update, :edit, :sort]}, admin: :all
 
   def index
-   @portfolios = Portfolio.by_position
-  end
+    if logged_in?(:admin)
+      @portfolios = Portfolio.all
+    else
+      @portfolios = Portfolio.published
+    end  end
 
   def sort
     params[:order].each do |key, value|
